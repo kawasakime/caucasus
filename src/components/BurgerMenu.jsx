@@ -26,6 +26,10 @@ const BurgerMenu = ({ ref }) => {
       title: "Структура проекта",
     },
     {
+      link: "#projects",
+      title: "Подпроекты" 
+    },
+    {
       link: "#contacts",
       title: 'Контакты'
     }

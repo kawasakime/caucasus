@@ -46,7 +46,7 @@ const Sections = () => {
             );
           })}
         </div>
-        <div className="info">
+        <div className="info" id="projects">
           {projectsInfo.map((item, i) => (
             <Accordion
               key={i}
