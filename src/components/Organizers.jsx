@@ -2,8 +2,7 @@ import React from "react";
 
 const organizers = [
   {
-    title:
-      "Российская академия народного хозяйства и государственной службы при Президенте Российской Федерации Южно-Российский институт управления – филиал центр правовых исследований",
+    title: "",
   },
   {
     title:
@@ -41,20 +40,23 @@ const Organizers = () => {
         <div className="organizer-img"></div>
         <h3 className="name">Шапсугов Дамир Юсуфович</h3>
         <p>
-          доктор юридических наук, профессор, академик АМАН и МАНЭБ, заслуженный
-          юрист РФ, директор центра правовых исследований ЮРИУ РАНХиГС, главный
-          редактор журнала «Северо-Кавказский юридический вестник».
+          доктор юридических наук, профессор, академик АМАН и МАНЭБ, заслуженный юрист РФ, директор
+          центра правовых исследований ЮРИУ РАНХиГС, главный редактор журнала «Северо-Кавказский
+          юридический вестник».
         </p>
       </div>
       <div className="so-organizers" id="so-organizers">
         <h1>Участники проекта</h1>
         <div className="so-organizers__container">
-          {organizers.map((item, i) => (
-            <div key={i} className="so-organizers__item">
-              <img src={`./assets/img/so-organizers/${i + 1}.png`} alt="" />
-              <p>{item.title}</p>
-            </div>
-          ))}
+          {organizers.map(
+            (item, i) =>
+              i !== 0 && (
+                <div key={i} className="so-organizers__item">
+                  <img src={`./assets/img/so-organizers/${i + 1}.png`} alt="" />
+                  <p>{item.title}</p>
+                </div>
+              )
+          )}
         </div>
       </div>
     </>

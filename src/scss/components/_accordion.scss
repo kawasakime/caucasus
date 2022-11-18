@@ -50,6 +50,8 @@
     .imgs {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
       img {
         max-height: 400px;
         margin: 0 10px;

@@ -8,7 +8,7 @@ const Links = ({ data }) => {
           !!item.title && (
             <a
               key={i}
-              href={!!item.pdf ? `./assets/pdf/${item.pdf}` : `./assets/pdf/Том${i + 1}.pdf`}>
+              href={!!item.pdf ? `./assets/pdf/${item.pdf}` : `./assets/pdf/Том${i + 1}.pdf`} target="blank">
               {item.title}
             </a>
           )
