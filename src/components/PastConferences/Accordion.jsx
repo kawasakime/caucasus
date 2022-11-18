@@ -1,7 +1,7 @@
 import React from "react";
 import Links from "../Links";
 
-const Accordion = ({ title, text, imgs }) => {
+const Accordion = ({ title, text, imgs, data }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   function handlerClickAccordion(e) {
@@ -25,7 +25,7 @@ const Accordion = ({ title, text, imgs }) => {
             <img key={i} src={`./assets/img/projects/${img}`} alt="" />
           ))}
         </div>
-        <Links />
+        <Links data={data} />
       </div>
     </div>
   );

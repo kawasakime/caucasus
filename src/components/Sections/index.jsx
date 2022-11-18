@@ -48,7 +48,13 @@ const Sections = () => {
         </div>
         <div className="info">
           {projectsInfo.map((item, i) => (
-            <Accordion key={i} title={item.title} text={item.text} imgs={item.imgs}/>
+            <Accordion
+              key={i}
+              title={item.title}
+              text={item.text}
+              imgs={item.imgs}
+              data={item.data}
+            />
           ))}
         </div>
       </div>

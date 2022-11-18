@@ -1,10 +1,16 @@
-import React from 'react';
-import { links } from '../data/conferences';
+import React from "react";
 
-const Links = () => {
+const Links = ({ data }) => {
   return (
-    <div className='links'>
-      {links.map((item, i) => <a key={i} href='/'>{item.title}</a>)}
+    <div className="links">
+      {data.map(
+        (item, i) =>
+          !!item.title && (
+            <a key={i} href={!!item.pdf ? item.pdf : `./assets/pdf/Том${i + 1}.pdf`}>
+              {item.title}
+            </a>
+          )
+      )}
     </div>
   );
 };
