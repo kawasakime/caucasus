@@ -1,0 +1,23 @@
+@import '../../../scss/variables';
+@import "../../../scss/mixins";
+
+.btn {
+  text-decoration: none;
+  padding: 20px 40px;
+  background: $red;
+  color: $white;
+  border-radius: 30px;
+  transition: .2s;
+  align-self: center;
+  margin: 20px 0;
+  font-weight: 600;
+  @include _600 {
+    padding: 14px 30px;
+    font-size: 15px;
+  }
+}
+
+.btn:hover {
+  background: $light_red;
+  transform: scale(1.02);
+}
