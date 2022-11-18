@@ -6,7 +6,9 @@ const Links = ({ data }) => {
       {data.map(
         (item, i) =>
           !!item.title && (
-            <a key={i} href={!!item.pdf ? item.pdf : `./assets/pdf/Том${i + 1}.pdf`}>
+            <a
+              key={i}
+              href={!!item.pdf ? `./assets/pdf/${item.pdf}` : `./assets/pdf/Том${i + 1}.pdf`}>
               {item.title}
             </a>
           )
