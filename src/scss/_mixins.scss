@@ -12,14 +12,17 @@
 
 @mixin title {
   text-align: center;
-  font-size: 36px;
-  font-size: calc(22px + 14 * (100vw / 1280));
   text-transform: uppercase;
+  color: $red;
+  line-height: 1.23;
   margin-bottom: 100px;
+  @include _800() {
+    font-size: 25px;
+  }
 
   @include _600 {
-    margin-bottom: 50px
-  };
+    margin-bottom: 50px;
+  }
 }
 
 @mixin flex-column-center {

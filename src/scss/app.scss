@@ -99,16 +99,35 @@ section {
 }
 
 #info {
-  // max-width: 960px;
-  text-align: center;
+  text-align: justify;
   margin: 0 auto;
   padding: 45px 10px;
+
+  .title {
+    text-align: center;
+  }
+
+  // hr {
+  //   width: 250px;
+  //   color: $red;
+  //   margin: 30px auto;
+  // }
+
+  article {
+    position: relative;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      max-width: 400px;
+    }
+  }
 
   ul {
     list-style-type: none;
     h1 {
       @include title;
-      color: black;
     }
     li {
       margin: 30px 0;
@@ -144,19 +163,14 @@ section {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.5;
+    text-indent: 60px;
+    margin-bottom: 30px;
 
     @include _800() {
       font-size: 20px;
     }
     @include _600() {
       font-size: 16px;
-    }
-
-    hr {
-      width: 250px;
-      color: $red;
-      margin: 0 auto;
-      margin-bottom: 30px;
     }
 
     span {
@@ -169,7 +183,6 @@ section {
     h1 {
       @include title;
       margin-top: 50px;
-      color: black;
     }
   }
 
@@ -191,11 +204,20 @@ section {
 
     .name {
       font-size: 22px;
+      text-align: center;
+    }
+
+    ul {
+      li {
+        margin: 8px;
+        list-style-type: disc;
+        margin-left: 60px;
+      }
     }
 
     p {
       font-size: 16px !important;
-      max-width: 500px;
+      // max-width: 500px;
       margin: 0 auto;
       margin-top: 15px;
     }
@@ -208,6 +230,10 @@ section {
   }
 
   .so-organizers {
+    text-align: center;
+    p {
+      text-indent: 0px;
+    }
     &__container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -376,6 +402,11 @@ section {
   text-align: center;
   margin: 0 auto;
 
+  .extra-bold {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
   ul {
     font-weight: 300;
     max-width: 1050px;
@@ -412,7 +443,7 @@ section {
 
 .links {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   margin-top: 20px;
 
@@ -420,7 +451,7 @@ section {
     color: $red;
     margin: 5px 0;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     white-space: pre-line;
 
     &:hover {
